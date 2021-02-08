@@ -85,9 +85,9 @@ app.post('/', (req, res) => {
                 dbo.collection('user').update({
                     userid: req.body.id  ////// required ////
                 }, {$set: {
-			username: req.body.username,
-			password: md5(req.body.password)
-		}}, function(err, result){
+                    username: req.body.username, ////// required ////
+                    password: md5(req.body.password) ////// required ////
+                }}, function(err, result){
                     if(err) throw err;
                     res.send(JSON.stringify({status: 1, message: 'Success'}));
                 });
