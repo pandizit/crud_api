@@ -5,7 +5,7 @@ const randnumber = require('rand-token').generator({ chars: '0-9' });
 const randtoken = require('rand-token').generator({ chars: 'a-z' });
 const mongodb = require('mongodb').MongoClient;
 const app = express();
-const port = 3001;
+const port = 8080;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
